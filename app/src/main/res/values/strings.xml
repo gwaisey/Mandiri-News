@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Mandiri News</string>
+    <string name="gambar_berita">Gambar Berita</string>
+    <string name="dummy_title">Judul Berita Muncul di Sini</string>
+    <string name="dummy_source">CNN Indonesia • 10 Jan, 2021</string>
+    <string name="dummy_headline">Berita Terkini</string>
+    <string name="dummy_all_news">Semua Berita</string>
+</resources>
