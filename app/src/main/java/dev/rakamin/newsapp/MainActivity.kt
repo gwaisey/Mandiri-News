@@ -92,6 +92,7 @@ class MainActivity : AppCompatActivity() {
                         articles.addAll(response.articles)
                     }
                     newsAdapter.notifyDataSetChanged()
+                    binding.rvAllNews.scrollToPosition(0)
                 }
             } catch (e: Exception) {
                 e.printStackTrace()
