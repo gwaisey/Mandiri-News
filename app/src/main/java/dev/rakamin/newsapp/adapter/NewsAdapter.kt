@@ -1,5 +1,7 @@
 package dev.rakamin.newsapp.adapter
 
+import android.content.Intent
+import android.net.Uri
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -48,6 +50,11 @@ class NewsAdapter(private val articles: MutableList<Article>) : RecyclerView.Ada
                 .load(article.urlToImage)
                 .error(R.drawable.logo_mandiri)
                 .into(holder.imgNews)
+        }
+        holder.itemView.setOnClickListener {
+            val intent = Intent(Intent.ACTION_VIEW)
+            intent.data = Uri.parse(article.url)
+            holder.itemView.context.startActivity(intent)
         }
     }
 
