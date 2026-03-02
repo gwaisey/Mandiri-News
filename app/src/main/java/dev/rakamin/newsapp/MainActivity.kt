@@ -1,5 +1,7 @@
 package dev.rakamin.newsapp
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
@@ -30,6 +32,12 @@ class MainActivity : AppCompatActivity() {
 
         setupRecyclerView()
         fetchNews("indonesia", 1)
+
+        binding.imgLogoMandiri.setOnClickListener {
+            val intent = Intent(Intent.ACTION_VIEW)
+            intent.data = Uri.parse("https://www.bankmandiri.co.id")
+            startActivity(intent)
+        }
     }
 
     private fun setupRecyclerView() {
